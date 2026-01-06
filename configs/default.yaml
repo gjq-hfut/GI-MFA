@@ -1,0 +1,24 @@
+# Default config for public release
+
+seed: 20
+device: cuda
+
+# Training
+lr: 0.001
+num_epochs: 200
+batch_size: 256
+eval_batch_size: 512
+topks: [5, 10, 15, 20, 25]
+
+# Data paths (the repo does not ship data; see data/README.md)
+data:
+  user_item_csv: data/raw/user_item.csv
+  group_user_csv: data/raw/group_user.csv
+  group_item_csv: data/raw/group_item.csv
+
+# Model hyper-params (fill these based on your paper / notebook)
+model:
+  input_dim: 4
+  group_num: 113
+  user_num: 673
+  paper_num: 5729
